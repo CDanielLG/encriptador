@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-hKjE3V5ue5Nv2uVZwzHf2GjK93xOjqXlSfS8mULzHXLpKmZmziiY4yo4tbU6BiOJ6TBCvX9r21jP/lGQdnlzxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <title>Encriptador de mensajes</title>
+</head>
+
+<body>
+
+    <img src="/assets/img/Logo.png" class="logo" alt="">
+    <header class="marco">
+        <h1>Encriptador de mensajes</h1>
+    </header>
+   
+    <div class="container dos-columnas">
+        <div class="texto normal">
+            <textarea rows="2" class="encriptar" id="texto" placeholder="Ingrese su texto aqui"></textarea>
+            <div class="">
+                <i>&#9888; solo letras minúsculas y sin acentos</i>
+                <div class="botones botones-container">
+                    <button class="boton" onclick="encriptar()"> <i class="fa-solid fa-user-secret"></i>
+                        Encriptar</button>
+                    <button class="boton"  onclick="desencriptar()"><i class="fa-solid fa-eye"></i>Desencriptar</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="texto encriptado">
+            <p class="no-encontrado"  id="encriptado"><img src="/assets/img/Muñeco.png" alt="muñeco" class="muñeco">
+                <span>Ningún mensaje fue encontrado</span>
+                Ingresa el texto que desees encriptar o desencriptar.
+            </p>
+            <button class="btn-copiar" id="copiarBoton" onclick="copiarTexto()">Copiar</button>
+        </div>
+        
+            <div class="modal" id="copiarModal">
+                <div class="modal-contenido">
+                  <p>Texto copiado al portapapeles <i class="fas fa-check-circle"></i>
+                  </p>
+
+                </div>
+              </div>
+              <div class="overlay"></div>
+        
+      
+          
+    </div>
+
+    <footer class="footer">
+        <p>Hecho con <i class="fa-solid fa-heart"></i> por <a href="#">Carlos Daniel López González</a></p>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/543a80da48.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
