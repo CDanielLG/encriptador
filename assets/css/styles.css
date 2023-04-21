@@ -24,11 +24,11 @@ body {
   font-family: var(--fuenteHeading);
   background-color: #F3F5FC;
   background-color: #D9AFD9;
- background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
 
 
   background-repeat: no-repeat;
-  
+
 }
 
 .container {
@@ -42,7 +42,8 @@ body {
 
 @media screen and (max-width:768px) {
   .container {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
 
@@ -51,6 +52,7 @@ body {
   .texto {
     margin-top: 15rem;
     height: auto;
+    
   }
 
 
@@ -85,6 +87,20 @@ body {
 
 }
 
+h1 {
+  background-image: url('path/to/image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  animation: pulse 1s infinite;
+}
+
+h1:hover {
+  transform: rotateY(180deg);
+  
+}
 textarea {
   text-transform: lowercase;
   width: 100%;
@@ -157,14 +173,26 @@ textarea:focus {
     justify-content: center;
     align-items: center;
   }
+
+  .btn-copiar {
+    background-color: var(--primario);
+    color: var(--blanco);
+    font-size: 2rem;
+    line-height: 1.5;
+    border-radius: 1rem;
+    border: none;
+    margin-top: 10rem;
+ 
+
+  }
 }
+
 
 .texto {
 
   font-size: 1.5rem;
   line-height: 1.5;
   text-align: center;
-  padding: 10px 20px;
   text-decoration: none;
 
 }
@@ -208,6 +236,8 @@ textarea:focus {
 }
 
 @media (max-width: 768px) {
+
+
   .encriptado {
     position: relative;
     display: flex;
@@ -215,27 +245,21 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     height: auto;
+    margin-top: 15rem;
     border-radius: 3rem;
-    margin-bottom: 10rem;
     width: 100%;
     padding: 1rem;
     border-radius: 2rem;
-    background-color: var(--blanco);
+    padding: 2rem;
   }
 
-  .titulo {
-    font-size: 2rem;
-    align-items: center;
-    text-align: center;
-    border: 1px solid var(--primario);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 2rem;
-    background-color: var(--blanco);
-    border-bottom: #000000;
-  }
+
 
   .encriptado p {
     font-size: 1.5rem;
+    position: relative; /* make the p element a positioned element */
+    z-index: 1; /* give the p element a higher z-index than the button */
+    margin-top:5rem
 
   }
 
@@ -290,6 +314,12 @@ textarea:focus {
   font-weight: 700;
   color: var(--primario);
   border-radius: 2rem;
+  background-color: rgba(245, 245, 245, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+
 }
 
 .footer {
