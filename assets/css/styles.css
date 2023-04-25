@@ -51,8 +51,9 @@ body {
 
   .texto {
     margin-top: 15rem;
-    height: auto;
-    
+    width: 100%;
+  
+
   }
 
 
@@ -99,8 +100,9 @@ h1 {
 
 h1:hover {
   transform: rotateY(180deg);
-  
+
 }
+
 textarea {
   text-transform: lowercase;
   width: 100%;
@@ -110,6 +112,12 @@ textarea {
   border: none;
   overflow-y: scroll;
   color: var(--primario);
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -169,9 +177,12 @@ textarea:focus {
 
 @media (max-width: 768px) {
   .botones-container {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: flex-start;
+    margin-top: 0;
   }
 
   .btn-copiar {
@@ -182,7 +193,7 @@ textarea:focus {
     border-radius: 1rem;
     border: none;
     margin-top: 10rem;
- 
+
 
   }
 }
@@ -201,7 +212,7 @@ textarea:focus {
 
 
 .encriptado {
-  position: relative;
+   position: relative;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -210,8 +221,15 @@ textarea:focus {
   align-items: center;
   padding: 2rem;
   border-radius: 2rem;
-  height: 70rem;
-  width: 40rem;
+  max-width: 40rem;
+ 
+
+  color: var(--primario);
+  border-radius: 2rem;
+  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+
 }
 
 .encriptado p {
@@ -244,23 +262,26 @@ textarea:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
-    margin-top: 15rem;
-    border-radius: 3rem;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 2rem;
+    
     padding: 2rem;
+    border-radius: 2rem;
+    max-width: 40rem;
+ 
+    margin-bottom: 0rem;
+
   }
+
+
 
 
 
   .encriptado p {
     font-size: 1.5rem;
-    position: relative; /* make the p element a positioned element */
-    z-index: 1; /* give the p element a higher z-index than the button */
-    margin-top:5rem
-
+    position: relative;
+    /* make the p element a positioned element */
+    z-index: 1;
+    /* give the p element a higher z-index than the button */
+    margin-top: 5rem
   }
 
   .encriptado span {
@@ -289,7 +310,7 @@ textarea:focus {
   top: 10px;
   right: 10px;
   background-color: var(--primario);
-
+  display: none;
   color: white;
   padding: 8px 16px;
   text-align: center;
@@ -318,9 +339,10 @@ textarea:focus {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-left: 1rem;
   margin-right: 1rem;
-
+  text-align: center;
 
 }
+
 
 .footer {
   background-color: var(--primario);

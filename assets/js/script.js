@@ -89,6 +89,7 @@ elementoTexto.addEventListener('input', function() {
   }
 });
 
+
 function copiarTexto() {
   // Obtener el texto a copiar
   const textoACopiar = document.getElementById("encriptado").textContent;
